@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Hola puto, esta es mi página web 😎</h1>
+    <p>Escribe tu nombre y apellido para entrar.</p>
+
+    <form id="entryForm">
+      <input id="nombre" type="text" maxlength="80" placeholder="Nombre" required>
+      <input id="apellido" type="text" maxlength="80" placeholder="Apellido" required>
+      <textarea id="estupidez" maxlength="500" placeholder="Escribe cualquier estupidez (opcional)"></textarea>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p id="mensaje"></p>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

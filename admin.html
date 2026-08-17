@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card admin">
+    <h1>Panel de administrador 🔐</h1>
+
+    <section id="loginBox">
+      <input id="email" type="email" placeholder="Correo del administrador">
+      <input id="password" type="password" placeholder="Contraseña">
+      <button id="loginBtn">Iniciar sesión</button>
+      <p id="loginMsg"></p>
+    </section>
+
+    <section id="panel" hidden>
+      <button id="logoutBtn">Cerrar sesión</button>
+      <h2>Personas que entraron</h2>
+      <div id="tabla">Cargando...</div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

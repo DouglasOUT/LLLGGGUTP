@@ -1,0 +1,3 @@
+const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const form=document.getElementById('entryForm'),msg=document.getElementById('mensaje');
+form.addEventListener('submit',async e=>{e.preventDefault();const nombre=document.getElementById('nombre').value.trim(),apellido=document.getElementById('apellido').value.trim(),estupidez=document.getElementById('estupidez').value.trim();if(!nombre||!apellido)return;msg.textContent='Guardando...';const{error}=await client.from('visitas').insert({nombre,apellido,mensaje:estupidez||null});if(error){console.error(error);msg.textContent='No se pudo guardar. Revisa la configuración.';return}form.reset();msg.textContent=`Bienvenido, ${nombre} ${apellido} 👋`});
